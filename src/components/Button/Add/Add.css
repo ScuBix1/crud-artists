@@ -1,0 +1,10 @@
+.add-artist{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    background-color: rgba(0, 255, 0, 0.3);
+}
+.add-artist:hover{
+    cursor: pointer;
+}
