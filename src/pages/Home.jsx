@@ -18,7 +18,6 @@ export const Home = () => {
                 const newArtist = { firstName, lastName }
                 artists.push(newArtist)
                 setFullName('')
-                console.log(artists)
             } else {
                 alert('Entrez au format suivant: "Bastian Monnin"')
             }
