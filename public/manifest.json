@@ -1,0 +1,10 @@
+{
+  "short_name": "CRUD Artists",
+  "name": "CRUD Artists",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "",
+  "background_color": "#ffffff"
+}
