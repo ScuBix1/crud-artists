@@ -1,0 +1,16 @@
+.input-text-without-placeholder{  
+    width: 35vw;
+    border: 2px solid var(--border-color);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 10px;
+    background-color: var(--card-background);
+    color: var(--text-high-contrast);
+} 
+@media (max-width: 600px){
+    .input-text-without-placeholder{
+        width: 50vw;
+        text-overflow: ellipsis;
+    }
+}

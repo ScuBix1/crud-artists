@@ -1,0 +1,22 @@
+.delete-artist {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--button-delete-background);
+    color: var(--text-button-solid);
+    transition: all 0.3s ease-out;
+}
+
+.delete-artist:hover i {
+    transform: scale(1.3);
+    transition: all 0.3s ease-out;
+
+}
+
+.delete-artist:hover {
+    cursor: pointer;
+    background-color: var(--button-delete-hover-background);
+    width: 40px;
+    height: 40px;
+}

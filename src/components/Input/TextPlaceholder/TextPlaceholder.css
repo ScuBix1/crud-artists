@@ -1,6 +1,15 @@
-.input-text-with-placeholder{   
-    border: 2px solid black;
+.input-text-with-placeholder{  
+    border: 2px solid var(--border-color);
     border-radius: 30px;
     padding: 10px 20px;
     font-size: 1rem;
+    margin-top: 10px;
+    background-color: var(--card-background);
+    color: var(--text-high-contrast);
 } 
+@media (max-width: 600px){
+    .input-text-with-placeholder{
+        width: 50vw;
+        text-overflow: ellipsis;
+    }
+}

@@ -1,4 +1,70 @@
+:root{
+  --background-color: #FBFDFF;
+  --background-color-header: #F4FAFF;
+  --card-background: #E6F4FE;
+  --border-color: #ACD8FC;
+  --text-low-contrast: #113264;
+  --text-high-contrast: #0D74CE;
+  --color-icon: #ffffff;
+  --button-add-background: #30A46C;
+  --button-add-hover-background: #2B9A66;
+  --button-delete-background: #E5484D;
+  --button-delete-hover-background: #DC3E42;
+  --button-update-background: #0090FF;
+  --button-update-hover-background: #0588F0;
+  --text-button-solid: #ffffff;
+}
+.dark{
+  --background-color: #0D1520;
+  --background-color-header: #111927;
+  --card-background: #0D2847;
+  --border-color: #104D87;
+  --text-low-contrast: #C2E6FF;
+  --text-high-contrast: #70B8FF;
+}
+
+@keyframes fade-down{
+  0%{
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+body{
+  background-color: var(--background-color);
+}
 #root .App{
   width: 70vw;
   margin: 0 auto;
+}
+#root .App header{
+  padding: 30px 0;
+  margin: 0;
+  background-color: var(--background-color-header);
+}
+#root .App hr{
+  margin-top: 0;
+  margin-bottom: 50px;
+  border: 1px solid var(--border-color);
+}
+#root .App header, #root .App hr{
+  width: 100vw;
+  margin-left: -15vw;
+}
+#add-artist-part{
+  display: flex;
+  align-items: center;
+  animation: fade-down 0.5s forwards;
+}
+#add-artist-part .add-artist{
+  margin: 10px 0 0 10px;
+}
+@media (max-width: 600px){
+  #add-artist-part{
+    display: grid;
+    align-items: center;
+  }
 }

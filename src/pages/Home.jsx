@@ -3,6 +3,7 @@ import H1 from '../components/Title/H1/H1'
 import Artist from '../components/Card/Artist/Artist'
 import Delete from '../components/Button/Delete/Delete'
 import Update from '../components/Button/Update/Update'
+import Theme from '../components/Button/Theme/Theme'
 import TextPlaceholder from '../components/Input/TextPlaceholder/TextPlaceholder'
 import TextInfo from '../components/Input/TextInfo/TextInfo'
 import Add from '../components/Button/Add/Add'
@@ -59,7 +60,11 @@ export const Home = () => {
 
     return (
         <>
-            <H1>Top artistes chanteurs</H1>
+            <header>
+                <H1>Top artistes chanteurs</H1>
+                <Theme />
+            </header>
+            <hr />
             {artists.map((artist, index) => {
                 return (
                     <>
@@ -75,6 +80,7 @@ export const Home = () => {
                                         />
                                     </>
                                 }
+                                style={{ animationDelay: `calc(${index} * 0.5s)` }}
                             >
                                 <Delete onClick={() => handleDeleteArtist(index)} />
                             </Artist>
@@ -90,7 +96,7 @@ export const Home = () => {
                     </>
                 )
             })}
-            <div>
+            <div id="add-artist-part">
                 <TextPlaceholder
                     placeholder={'Entrez le prénom et le nom'}
                     value={fullName}
