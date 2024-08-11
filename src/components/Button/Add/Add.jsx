@@ -2,7 +2,7 @@ import './Add.css'
 const Add = ({ text, onClick }) => {
     return (
         <button type="button" className="add-artist" onClick={onClick ? onClick : ''}>
-            {text ? text : <i class="fa-solid fa-plus"></i>}
+            {text ? text : <i className="fa-solid fa-plus"></i>}
         </button>
     )
 }

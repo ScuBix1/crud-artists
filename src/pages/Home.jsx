@@ -7,7 +7,7 @@ import Theme from '../components/Button/Theme/Theme'
 import TextPlaceholder from '../components/Input/TextPlaceholder/TextPlaceholder'
 import TextInfo from '../components/Input/TextInfo/TextInfo'
 import Add from '../components/Button/Add/Add'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export const Home = () => {
     const [artists, setArtists] = useState(Artists)
@@ -21,7 +21,7 @@ export const Home = () => {
 
             if (firstName && lastName) {
                 const newArtist = { firstName, lastName }
-                artists.push(newArtist)
+                setArtists([...artists, newArtist])
                 setFullName('')
             } else {
                 alert('Entrez au format suivant: "Bastian Monnin"')
@@ -54,10 +54,6 @@ export const Home = () => {
         }
     }
 
-    useEffect(() => {
-        setArtists(artists)
-    }, [artists])
-
     return (
         <>
             <header>
@@ -67,10 +63,9 @@ export const Home = () => {
             <hr />
             {artists.map((artist, index) => {
                 return (
-                    <>
+                    <div key={index}>
                         {editIndex === index ? (
                             <Artist
-                                key={index}
                                 artistInfo={
                                     <>
                                         <TextInfo
@@ -86,14 +81,13 @@ export const Home = () => {
                             </Artist>
                         ) : (
                             <Artist
-                                key={index}
                                 artistInfo={`${artist.firstName} ${artist.lastName}`}
                             >
                                 <Update onClick={() => handleEditArtist(index)} />
                                 <Delete onClick={() => handleDeleteArtist(index)} />
                             </Artist>
                         )}
-                    </>
+                    </div>
                 )
             })}
             <div id="add-artist-part">

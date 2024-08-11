@@ -18,7 +18,7 @@ const Theme = () => {
     return (
         <div className="theme-mode">
             <input className="theme-input" type="checkbox" id="theme-toggle" onChange={toggleTheme}/>
-            <label className="theme-label" for="theme-toggle">
+            <label className="theme-label" htmlFor="theme-toggle">
                 <Sun />
                 <Moon />
             </label>
